@@ -1,0 +1,161 @@
+//
+// Custom Main
+//
+// Add your own styles or override existing ones
+//
+// This file is included last, so you have access
+// to all Bootstrap and Dashmix functions/mixins/styles etc
+// --------------------------------------------------
+
+// If you have many custom styles, you can create and import additional files
+// For example you can create _component1.scss and include it as follows:
+// @import 'component1';
+@import '../dashmix/variables-bootstrap';
+#page-footer{
+    min-height: 2rem;
+    
+    .content{
+        padding:0 1rem !important;
+    }
+}
+
+.img-map{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.4rem;
+}
+
+.content.content-full{
+    padding-bottom: 0.875rem;
+    padding-top: 0.875rem;
+}
+
+// FORM
+.required label::after{
+    content: ' *';
+    color: red;
+}
+
+.form-group {
+    padding: 10px 0px;
+}
+
+.custom-dashboard{
+    font-size: $font-size-sm;
+}
+
+.bg-logo{
+    background-color: #f6f7d1 !important;
+}
+
+.control-label {
+    font-weight: bold;
+}
+
+.nav-main-horizontal .nav-main-submenu {
+    z-index: 1050 !important;
+    width: 280px !important;
+}
+
+.table-customize {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table-customize > :not(caption) > tr > th {
+    padding: 0.25rem !important;
+    background-color: #0665d0;
+    color: white;
+    width: 20% !important;
+}
+
+table.table-gray tr th{
+    background-color: rgb(240, 240, 240);
+}
+
+.table-customize > :not(caption) > tr > td {
+    padding: 0.25rem !important;
+    
+}
+
+.dropdown-divider {
+    border-top: 1px solid #0665d0;
+    opacity: 0.2;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: inherit;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.boxshadow {
+    box-shadow: 0 1px 2px rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+}
+
+.sidebar-map {
+    width: 25rem !important;
+}
+
+.toggleDiv {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1000;
+    margin-left: 25rem;
+}
+
+.filterDiv {
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    margin-left: 28rem;
+    position: absolute;
+    // display: flex;
+    // flex-direction: row;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.side-overlay-custom {
+    width: 500px !important;
+}
+
+.chartStyle {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.tooltip.in {
+    position: absolute;
+    inset: auto auto 30px 0%;
+    margin: 0px;
+    opacity: var(--bs-tooltip-opacity);
+}
