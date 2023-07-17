@@ -22,13 +22,13 @@ class DynamicParams extends Component implements BootstrapInterface
     {
         return Yii::$app->cache->getOrSet('config-params', function () {
             $params = require __DIR__ . '/../config/params.php';
-            $maquan = Config::getMaquan();
-            $folder = $this->getFolder($maquan);
-            $khuvuc = $this->getKhuvuc($maquan);
-            $params['siteName'] = str_replace('{khuvuc}', $khuvuc, $params['siteName']);
-            $params['logoUrl'] = str_replace('{folder}', $folder, $params['logoUrl']);
-            $params['loginPage']['logoUrl'] = str_replace('{folder}', $folder, $params['loginPage']['logoUrl']);
-            $params['loginPage']['backgroundUrl'] = str_replace('{folder}', $folder, $params['loginPage']['backgroundUrl']);
+            // $maquan = Config::getMaquan();
+            // $folder = $this->getFolder($maquan);
+            // $khuvuc = $this->getKhuvuc($maquan);
+            // $params['siteName'] = str_replace('{khuvuc}', $khuvuc, $params['siteName']);
+            // $params['logoUrl'] = str_replace('{folder}', $folder, $params['logoUrl']);
+            // $params['loginPage']['logoUrl'] = str_replace('{folder}', $folder, $params['loginPage']['logoUrl']);
+            // $params['loginPage']['backgroundUrl'] = str_replace('{folder}', $folder, $params['loginPage']['backgroundUrl']);
             return $params;
         });
     }
