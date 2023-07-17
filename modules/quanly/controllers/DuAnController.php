@@ -78,10 +78,14 @@ class DuAnController extends BaseController
     public function actionView($id)
     {
        $model =  $this->findModel($id);
+       $chudautu = $model->chudautu;
+       $duanThaydoi = DuanThaydoi::find()->where(['duan_id' => $id])->andWhere(['status' => 1])->all();
 
        return $this->render('view', [
         'model' => $model,
-    ]);
+        'chudautu' => $chudautu,
+        'duanThaydoi' => $duanThaydoi,
+        ]);
     }
 
     /**
